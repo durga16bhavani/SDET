@@ -1,0 +1,42 @@
+Git Assignment 1
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~ (master)
+$ mkdir Myproject
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~ (master)
+$ cd Myproject/
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/Myproject/.git/
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ touch a.txt
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ vim a.txt
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ cat a.txt
+This is Assignment1.
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git add a.txt
+warning: in the working copy of 'a.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   a.txt
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git commit -m "Assignment1 completed."
+[master (root-commit) 8b20596] Assignment1 completed.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.txt

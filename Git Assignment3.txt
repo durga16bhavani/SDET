@@ -1,0 +1,72 @@
+Git Assignment3
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ git branch hotfix
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ git checkout hotfix
+Switched to branch 'hotfix'
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ git status
+On branch hotfix
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ touch code1.py
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ vim code1.py
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ cat code1.py
+a=10
+b=20
+sum=a+b
+print(Sum)
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ git add code1.py
+warning: in the working copy of 'code1.py', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ git commit -m "Issue Fixed."
+[hotfix 12cff58] Issue Fixed.
+ 1 file changed, 4 insertions(+)
+ create mode 100644 code1.py
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (hotfix)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git merge hotfix
+Updating 8b20596..12cff58
+Fast-forward
+ code1.py   |  4 ++++
+ index.html | 18 ++++++++++++++++++
+ 2 files changed, 22 insertions(+)
+ create mode 100644 code1.py
+ create mode 100644 index.html
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ cat code1.py
+a=10
+b=20
+sum=a+b
+print(Sum)
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ vim code1.py
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git add code1.py
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git commit -m "Issue Resolved."
+[master 687717d] Issue Resolved.
+ 1 file changed, 1 insertion(+)
+
+
+

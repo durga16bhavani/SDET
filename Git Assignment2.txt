@@ -1,0 +1,54 @@
+Git Assignment2
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git branch feature
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ touch index.html
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ vim index.html
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ cat index.html
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>Hello World!</title>
+<style>
+body {background-color:white;}
+h1  {color:red;}
+p {color:blue;}
+</style>
+        </head>
+        <body>
+                <h1>Hello World!</h1>
+                <p>This is the first file in my new Git Repository.</P>
+                <p>A new line in our file!</p>
+        </body>
+</html>
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ git add index.html
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (feature)
+$ git commit -m "Assignment2 completed."
+[feature a6e5ac6] Assignment2 completed.
+ 1 file changed, 18 insertions(+)
+ create mode 100644 index.html
