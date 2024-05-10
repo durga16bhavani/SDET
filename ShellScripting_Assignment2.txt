@@ -1,0 +1,46 @@
+Shell Scripting Assignment 2
+
+Durgabhavani@DESKTOP-TTU5E43 MINGW64 ~/Myproject
+$ touch Assignment2.sh
+
+Durgabhavani@DESKTOP-TTU5E43 MINGW64 ~/Myproject
+$ vim Assignment2.sh
+
+Durgabhavani@DESKTOP-TTU5E43 MINGW64 ~/Myproject
+$ cat Assignment2.sh
+#!/bin/bash
+
+while true; do
+    # Prompt the user to enter a number
+    echo "Enter a number (enter 0 to exit):"
+    read number
+
+    # Check if the input is '0', if so, exit the loop
+    if [ "$number" -eq 0 ]; then
+        echo "Exiting..."
+        break
+    fi
+
+    # Check if the number is even or odd
+    if [ $((number % 2)) -eq 0 ]; then
+        echo "$number is even."
+    else
+        echo "$number is odd."
+    fi
+done
+
+Durgabhavani@DESKTOP-TTU5E43 MINGW64 ~/Myproject
+$ chmod u+x Assignment2.sh
+
+Durgabhavani@DESKTOP-TTU5E43 MINGW64 ~/Myproject
+$ ./Assignment2.sh
+Enter a number (enter 0 to exit):
+6
+6 is even.
+Enter a number (enter 0 to exit):
+7
+7 is odd.
+Enter a number (enter 0 to exit):
+0
+Exiting...
+
