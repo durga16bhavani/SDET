@@ -1,0 +1,49 @@
+              Shell Scripting Assignment 1
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ touch Assignment1.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ vim Assignment1.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ cat Assignment1.sh
+
+#!/bin/bash
+
+#Take input from the user for the file name
+
+echo "Enter the file name:"
+read filename
+
+#check if file is in current directory
+
+if [ -e "$filename" ]; then
+        echo "File exists"
+else
+        echo "File not found"
+fi
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ ls -l
+total 5
+-rw-r--r-- 1 Administrator 197121   0 May  9 11:27 100
+-rw-r--r-- 1 Administrator 197121   0 May  9 12:16 Assignment1
+-rwxr-xr-x 1 Administrator 197121 220 May  9 12:26 Assignment1.sh*
+-rw-r--r-- 1 Administrator 197121  21 May  8 16:40 a.txt
+-rw-r--r-- 1 Administrator 197121  52 May  8 17:03 code1.py
+-rw-r--r-- 1 Administrator 197121 395 May  8 17:02 index.html
+-rwxr-xr-x 1 Administrator 197121 134 May  9 11:28 script1.sh*
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ ./Assignment1.sh
+Enter the file name:
+a.txt
+File exists
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 ~/Myproject (master)
+$ ./Assignment1.sh
+Enter the file name:
+c.txt
+File not found
