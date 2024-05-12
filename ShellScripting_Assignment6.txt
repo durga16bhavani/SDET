@@ -1,0 +1,49 @@
+ShellScriting Assignment6
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ touch log_file.log
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ vim log_file.log
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ cat log_file.log
+echo "This is log file"
+2024-05-09 08:30:20 - ERROR: Unable to connect to database
+2024-05-09 07:45:12 - WARNING: Connection timeout
+2024-05-09 09:36:38 - ERROR: Disk space full
+2024-05-09 08:32:56 - INFO: Application started
+2024-05-09 08:35:04 - ERROR: Server crashed unexpectedly
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ touch Assignment6.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ vim Assignment6.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ cat Assignment6.sh
+#!/bin/bash
+
+#log file path
+
+log_file="log_file.log"
+
+#grep to extract error containing lines
+
+error_lines=$(grep "ERROR" "$log_file")
+
+#Iterate over each error line and use awk to print date,time and error msg
+
+echo "$error_lines" | awk '{print $1, $2, $3, substr($0, index($0,$4))}'
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ ./Assignment6.sh
+2024-05-09 08:30:20 - ERROR: Unable to connect to database
+2024-05-09 09:36:38 - ERROR: Disk space full
+2024-05-09 08:35:04 - ERROR: Server crashed unexpectedly
+
+
+
+

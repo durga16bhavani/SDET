@@ -1,0 +1,53 @@
+ShellScripting Assignment7
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ touch file.txt
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ vim file.txt
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ cat file.txt
+This is old file.
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ touch Assignment7.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ vim Assignment7.sh
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ cat Assignment7.sh
+#!/bin/bash
+
+#Check 3 arguments are provided
+
+if [ "$#" -ne 3 ]; then
+        echo "Usage: $0 file old new"
+        exit 1
+fi
+
+file="$1"
+old="$2"
+new="$3"
+output="${file%.txt}_modified.txt" #append modified to original filename
+
+#Check file exits
+if [ ! -f "$file" ]; then
+        echo "Error: Input file '$file' does not exist."
+        exit 1
+fi
+#replace using sed
+
+sed "s/$old/$new/g" "$file" > "$output"
+
+echo "Replacement complete.Modified content saved to '$output'."
+
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ ./Assignment7.sh file.txt old new
+Replacement complete.Modified content saved to 'file_modified.txt'.
+
+Administrator@DESKTOP-TIC5DM4 MINGW64 /Myproject (master)
+$ cat file_modified.txt
+This is new file.
